@@ -126,17 +126,11 @@ function renderCompanies() {
   }
 
   const companyPills = companyNames.map(name => {
-    const initials = name
-      .split(/\s+/)
-      .filter(Boolean)
-      .map(word => word[0])
-      .join('')
-      .slice(0, 2)
-      .toUpperCase();
+    const first = name.charAt(0);
+    const rest = name.slice(1);
     return `
       <span class="co-chip">
-        <span class="co-badge">${initials}</span>
-        <span class="co-text">${name}</span>
+        <span class="co-text"><span class="co-initial">${first}</span>${rest}</span>
       </span>
     `;
   }).join('');

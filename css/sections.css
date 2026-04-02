@@ -57,25 +57,11 @@
 .co-chip {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   margin: 0 8px;
   padding: 4px 10px;
   border: 1px solid var(--muted2);
   border-radius: 3px;
   background: rgba(255,255,255,.01);
-}
-.co-badge {
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgba(0,255,136,.35);
-  border-radius: 2px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--green);
-  font-size: 9px;
-  font-weight: 700;
-  line-height: 1;
 }
 .co-text {
   display: inline-flex;
@@ -83,6 +69,10 @@
   color: var(--text);
   font-size: 11px;
   white-space: nowrap;
+}
+.co-initial {
+  color: var(--green);
+  font-weight: 700;
 }
 
 /* ── SKILLS ── */

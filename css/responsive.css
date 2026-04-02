@@ -61,8 +61,7 @@
   #companies .companies-strip { margin-top: 0; }
   .company-lane { padding: 2px 0; }
   .company-marquee { padding: 5px 0; }
-  .co-chip { gap: 6px; margin: 0 6px; padding: 4px 8px; }
-  .co-badge { width: 16px; height: 16px; font-size: 8px; }
+  .co-chip { margin: 0 6px; padding: 4px 8px; }
   .co-text { font-size: 10px; }
 
   /* Skills */
