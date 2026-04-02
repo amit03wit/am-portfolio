@@ -36,7 +36,7 @@ const PERSONAL = {
   responseTime: 'usually within 24 hours',
 
   // Footer
-  footerTagline: '11+ years of engineering depth, crafted and showcased in 30 minutes with AI tools',
+  footerTagline: '11+ years of engineering depth, crafted and showcased in no time with AI tools',
   footerRight:   '© 2026 — Amit Mahadik',
 
 };
