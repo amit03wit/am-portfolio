@@ -46,35 +46,43 @@
   background: var(--bg3);
   border: 1px solid var(--muted2);
   border-radius: 4px;
-  padding: 8px 10px;
+  padding: 2px 0;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
 }
-.company-track {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  will-change: transform;
-  animation: company-drift 14s ease-in-out infinite alternate;
+.company-marquee {
+  width: 100%;
+  padding: 6px 0;
+  white-space: nowrap;
 }
-.company-lane:hover .company-track { animation-play-state: paused; }
-.co-text {
+.co-chip {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
+  margin: 0 8px;
   padding: 4px 10px;
   border: 1px solid var(--muted2);
   border-radius: 3px;
+  background: rgba(255,255,255,.01);
+}
+.co-badge {
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0,255,136,.35);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+}
+.co-text {
+  display: inline-flex;
+  align-items: center;
   color: var(--text);
   font-size: 11px;
   white-space: nowrap;
-}
-@keyframes company-drift {
-  from { transform: translateX(-18px); }
-  to   { transform: translateX(18px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .company-track { animation: none; }
 }
 
 /* ── SKILLS ── */
@@ -159,13 +167,6 @@
 .pm   { display: flex; flex-direction: column; gap: 2px; }
 .pm-v { color: var(--green); font-size: 17px; font-weight: 700; }
 .pm-l { color: var(--dim); font-size: 10px; letter-spacing: .09em; }
-.proj-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
-.plink {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11px; color: var(--dim); text-decoration: none;
-  padding: 5px 11px; border: 1px solid var(--muted2); border-radius: 2px; transition: all .15s;
-}
-.plink:hover { color: var(--green); border-color: var(--green); }
 
 /* ── EXPERIENCE ── */
 .exp-list { display: flex; flex-direction: column; position: relative; }

@@ -125,7 +125,21 @@ function renderCompanies() {
     return;
   }
 
-  const companyPills = companyNames.map(name => `<span class="co-text">${name}</span>`).join('');
+  const companyPills = companyNames.map(name => {
+    const initials = name
+      .split(/\s+/)
+      .filter(Boolean)
+      .map(word => word[0])
+      .join('')
+      .slice(0, 2)
+      .toUpperCase();
+    return `
+      <span class="co-chip">
+        <span class="co-badge">${initials}</span>
+        <span class="co-text">${name}</span>
+      </span>
+    `;
+  }).join('');
 
   el.innerHTML = `
     <section id="companies">
@@ -135,7 +149,9 @@ function renderCompanies() {
           <div class="card-hd">companies.log</div>
           <div class="companies-sub">companies I was part of</div>
           <div class="company-lane">
-            <div class="company-track">${companyPills}</div>
+            <marquee class="company-marquee" behavior="alternate" direction="left" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
+              ${companyPills}
+            </marquee>
           </div>
         </div>
       </div>
@@ -203,9 +219,6 @@ function renderProjects() {
     const metricsHTML = p.metrics.map(m => `
       <div class="pm"><span class="pm-v">${m.value}</span><span class="pm-l">${m.label}</span></div>
     `).join('');
-    const links = Array.isArray(p.links) ? p.links : [];
-    const linksHTML = links.map(l => `<a href="${l.href}" class="plink" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${l.label}</a>`).join('');
-    const linksSection = linksHTML ? `<div class="proj-links">${linksHTML}</div>` : '';
     const mt = i === 0 ? '' : ' style="margin-top:2px"';
 
     return `
@@ -232,7 +245,6 @@ function renderProjects() {
             <div class="proj-sec-lbl">impact</div>
             <div class="proj-metrics">${metricsHTML}</div>
           </div>
-          ${linksSection}
         </div>
       </div>
     `;

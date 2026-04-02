@@ -20,8 +20,6 @@ const PROJECTS = [
     ],
 
     year: '2026',
-
-    links: [],
   },
 
   {
@@ -39,8 +37,6 @@ const PROJECTS = [
     ],
 
     year: '2022',
-
-    links: [],
   },
 
   {
@@ -58,8 +54,6 @@ const PROJECTS = [
     ],
 
     year: '2019',
-
-    links: [],
   },
 
   {
@@ -77,8 +71,6 @@ const PROJECTS = [
     ],
 
     year: '2017',
-
-    links: [],
   },
 
 ];

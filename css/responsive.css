@@ -59,9 +59,11 @@
   .stat        { grid-template-columns: 1fr; gap: 4px; padding: 8px 10px; }
   .companies-strip { margin-top: 12px; padding: 16px; }
   #companies .companies-strip { margin-top: 0; }
-  .company-lane { padding: 7px 8px; }
-  .company-track { gap: 8px; }
-  .co-text { font-size: 10px; padding: 4px 8px; }
+  .company-lane { padding: 2px 0; }
+  .company-marquee { padding: 5px 0; }
+  .co-chip { gap: 6px; margin: 0 6px; padding: 4px 8px; }
+  .co-badge { width: 16px; height: 16px; font-size: 8px; }
+  .co-text { font-size: 10px; }
 
   /* Skills */
   .skills-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
