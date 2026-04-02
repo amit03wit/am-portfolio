@@ -203,7 +203,9 @@ function renderProjects() {
     const metricsHTML = p.metrics.map(m => `
       <div class="pm"><span class="pm-v">${m.value}</span><span class="pm-l">${m.label}</span></div>
     `).join('');
-    const linksHTML = p.links.map(l => `<a href="${l.href}" class="plink" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${l.label}</a>`).join('');
+    const links = Array.isArray(p.links) ? p.links : [];
+    const linksHTML = links.map(l => `<a href="${l.href}" class="plink" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${l.label}</a>`).join('');
+    const linksSection = linksHTML ? `<div class="proj-links">${linksHTML}</div>` : '';
     const mt = i === 0 ? '' : ' style="margin-top:2px"';
 
     return `
@@ -230,7 +232,7 @@ function renderProjects() {
             <div class="proj-sec-lbl">impact</div>
             <div class="proj-metrics">${metricsHTML}</div>
           </div>
-          <div class="proj-links">${linksHTML}</div>
+          ${linksSection}
         </div>
       </div>
     `;

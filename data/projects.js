@@ -21,9 +21,7 @@ const PROJECTS = [
 
     year: '2026',
 
-    links: [
-      { label: '⌥ related repo — myProjects', href: 'https://github.com/amit03wit/myProjects' },
-    ],
+    links: [],
   },
 
   {
@@ -42,9 +40,7 @@ const PROJECTS = [
 
     year: '2022',
 
-    links: [
-      { label: '⌥ related repo — Tasker', href: 'https://github.com/amit03wit/Tasker' },
-    ],
+    links: [],
   },
 
   {
@@ -63,9 +59,7 @@ const PROJECTS = [
 
     year: '2019',
 
-    links: [
-      { label: '⌥ related repo — java-8', href: 'https://github.com/amit03wit/java-8' },
-    ],
+    links: [],
   },
 
   {
@@ -84,9 +78,7 @@ const PROJECTS = [
 
     year: '2017',
 
-    links: [
-      { label: '⌥ related repo — Spring Boot Assignment', href: 'https://github.com/amit03wit/Amit-Mahadik-Spring-Boot-Assignment-9623281553' },
-    ],
+    links: [],
   },
 
 ];
