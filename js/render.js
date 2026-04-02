@@ -1,0 +1,352 @@
+// ════════════════════════════════════════
+// js/render.js
+// Reads all data/*.js objects and injects them into the DOM.
+// You should not need to edit this file unless you want to
+// change the visual structure of a section.
+// ════════════════════════════════════════
+
+'use strict';
+
+/* ── NAV ── */
+function renderNav() {
+  const nav = document.getElementById('site-nav');
+  nav.innerHTML = `
+    <div class="nav-logo"><span>~/</span>${PERSONAL.handle}</div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="nav-status"><div class="dot"></div>${PERSONAL.statusText}</div>
+  `;
+}
+
+/* ── HERO ── */
+function renderHero() {
+  const el = document.getElementById('section-hero');
+  const ctaHTML = PERSONAL.ctas.map(c =>
+    `<a href="${c.href}" class="btn ${c.style}">${c.label}</a>`
+  ).join('');
+
+  el.innerHTML = `
+    <section id="hero">
+      <div class="wrap">
+        <div class="rev">
+          <div class="term-shell" id="term-shell">
+            <div class="term-bar">
+              <div class="dot-r"></div><div class="dot-y"></div><div class="dot-g"></div>
+              <span class="term-title" id="tbar-title">Terminal</span>
+            </div>
+            <div id="tout"></div>
+            <div id="thint"></div>
+            <div id="tinrow">
+              <span class="tp tp-user" id="p-user">${PERSONAL.username}</span>
+              <span class="tp tp-sep">:</span>
+              <span class="tp tp-path" id="p-path">~/portfolio</span>
+              <span class="tp tp-sep">&nbsp;$&nbsp;</span>
+              <input id="tin" type="text"
+                inputmode="text"
+                autocomplete="off" autocorrect="off"
+                autocapitalize="off" spellcheck="false"
+                placeholder="type 'help'…">
+            </div>
+            <div class="tap-hint" id="tap-hint" onclick="document.getElementById('tin').focus()">
+              ↑ tap to type a command
+            </div>
+          </div>
+
+          <h1 class="hero-name">${PERSONAL.heroLine1}<em>${PERSONAL.heroLine2}</em></h1>
+          <p class="hero-tag">
+            <span>${PERSONAL.heroTagline}</span> — ${PERSONAL.heroDesc.replace(/\n/g, '<br>')}
+          </p>
+          <div class="ctas">${ctaHTML}</div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── ABOUT ── */
+function renderAbout() {
+  const el = document.getElementById('section-about');
+  const statsHTML = ABOUT.stats.map(s => `
+    <div class="stat">
+      <span class="sk">${s.key}</span>
+      <span class="sv">${s.value}</span>
+    </div>
+  `).join('');
+
+  el.innerHTML = `
+    <section id="about">
+      <div class="wrap">
+        <div class="sec-lbl rev">whoami</div>
+        <div class="about-grid">
+          <div class="about-card rev">
+            <div class="card-hd">about.md</div>
+            <div class="card-body">${ABOUT.bio}</div>
+          </div>
+          <div class="about-card rev" style="transition-delay:.1s">
+            <div class="card-hd">stats.json</div>
+            <div class="stats">${statsHTML}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── SKILLS ── */
+function renderSkills() {
+  const el = document.getElementById('section-skills');
+
+  const groupsHTML = SKILLS.groups.map((g, i) => {
+    const delay = (i * 0.04).toFixed(2);
+    const pillsHTML = g.pills.map(p => `<span class="pill">${p}</span>`).join('');
+    return `
+      <div class="sg rev" style="transition-delay:${delay}s">
+        <div class="sg-ttl">${g.title}</div>
+        <div>${pillsHTML}</div>
+      </div>
+    `;
+  }).join('');
+
+  el.innerHTML = `
+    <section id="skills">
+      <div class="wrap">
+        <div class="sec-lbl rev">tech_stack</div>
+        <div class="skills-grid">
+          ${groupsHTML}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── PROJECTS ── */
+function renderProjects() {
+  const el = document.getElementById('section-projects');
+
+  const cardsHTML = PROJECTS.map((p, i) => {
+    const tagsHTML    = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    const metricsHTML = p.metrics.map(m => `
+      <div class="pm"><span class="pm-v">${m.value}</span><span class="pm-l">${m.label}</span></div>
+    `).join('');
+    const linksHTML = p.links.map(l => `<a href="${l.href}" class="plink" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${l.label}</a>`).join('');
+    const mt = i === 0 ? '' : ' style="margin-top:2px"';
+
+    return `
+      <div class="proj-card"${mt} onclick="this.classList.toggle('open')">
+        <div class="proj-hd">
+          <div class="proj-hd-l">
+            <span class="proj-idx">${String(i + 1).padStart(2, '0')}</span>
+            <span class="proj-name">${p.title}</span>
+            <span class="proj-year">${p.year}</span>
+            <div class="proj-tags">${tagsHTML}</div>
+          </div>
+          <span class="proj-arr">▶</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-section">
+            <div class="proj-sec-lbl">problem</div>
+            <p class="proj-sec-txt">${p.problem}</p>
+          </div>
+          <div class="proj-section">
+            <div class="proj-sec-lbl">built</div>
+            <p class="proj-sec-txt">${p.built}</p>
+          </div>
+          <div class="proj-section">
+            <div class="proj-sec-lbl">impact</div>
+            <div class="proj-metrics">${metricsHTML}</div>
+          </div>
+          <div class="proj-links">${linksHTML}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  el.innerHTML = `
+    <section id="projects">
+      <div class="wrap">
+        <div class="sec-lbl rev">projects</div>
+        <div class="proj-list rev">${cardsHTML}</div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── EXPERIENCE ── */
+function renderExperience() {
+  const el = document.getElementById('section-experience');
+
+  const itemsHTML = EXPERIENCE.map(e => {
+    if (e.oneliner) {
+      return `
+        <div class="exp-item exp-minimal">
+          <div class="exp-date">${e.period}</div>
+          <div class="exp-role">${e.role}</div>
+          <div class="exp-co">${e.company} — ${e.location}</div>
+          <p class="exp-oneliner">${e.oneliner}</p>
+        </div>
+      `;
+    }
+
+    const metricsHTML = e.metrics.map(m => `
+      <div class="exp-metric-pt">
+        <span class="exp-metric-v">${m.value}</span>
+        <span class="exp-metric-l">${m.label}</span>
+      </div>
+    `).join('');
+
+    return `
+      <div class="exp-item">
+        <div class="exp-date">${e.period}</div>
+        <div class="exp-role">${e.role}</div>
+        <div class="exp-co">${e.company} — ${e.location}</div>
+        <p class="exp-story">${e.story}</p>
+        <div class="exp-metrics">${metricsHTML}</div>
+      </div>
+    `;
+  }).join('');
+
+  el.innerHTML = `
+    <section id="experience">
+      <div class="wrap">
+        <div class="sec-lbl rev">git log --experience</div>
+        <div class="exp-list rev">${itemsHTML}</div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── EDUCATION ── */
+function renderEducation() {
+  const el = document.getElementById('section-education');
+  const hasDegrees = Array.isArray(EDUCATION.degrees) && EDUCATION.degrees.length > 0;
+  const degreesHTML = hasDegrees
+    ? EDUCATION.degrees.map(d => `
+      <div class="edu-item">
+        <div class="edu-date">${d.period}</div>
+        <div class="edu-degree">${d.degree}</div>
+        <div class="edu-inst">${d.institution}</div>
+      </div>
+    `).join('')
+    : `
+      <div class="edu-item">
+        <div class="edu-degree">Education details available on request.</div>
+      </div>
+    `;
+
+  const issuers = [...new Set(EDUCATION.certifications.map(c => c.issuer))];
+  const certsHTML = issuers.length
+    ? issuers.map(issuer => {
+      const certs = EDUCATION.certifications.filter(c => c.issuer === issuer);
+      const pillsHTML = certs.map(c => `
+        <div class="cert-pill">
+          <span class="cert-name">${c.name}</span>
+          <span class="cert-year">${c.year}</span>
+        </div>
+      `).join('');
+      return `
+        <div class="cert-group">
+          <div class="cert-issuer">${issuer}</div>
+          ${pillsHTML}
+        </div>
+      `;
+    }).join('')
+    : `
+      <div class="cert-group">
+        <div class="cert-issuer">No certifications listed.</div>
+      </div>
+    `;
+
+  el.innerHTML = `
+    <section id="education">
+      <div class="wrap">
+        <div class="sec-lbl rev">education</div>
+        <div class="edu-grid">
+          <div class="edu-card rev">
+            <div class="card-hd">degrees.json</div>
+            <div class="edu-list">${degreesHTML}</div>
+          </div>
+          <div class="edu-card rev" style="transition-delay:.1s">
+            <div class="card-hd">certifications.json</div>
+            <div class="certs-list">${certsHTML}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── CONTACT ── */
+function renderContact() {
+  const el = document.getElementById('section-contact');
+  const contactPitch = PERSONAL.contactPitch || 'Open to backend and fullstack roles. Working on an interesting technical problem? Let us talk.';
+  const responseTime = PERSONAL.responseTime || 'usually within 24h';
+  const links = [];
+
+  if (PERSONAL.email) {
+    links.push({ icon: '✉', label: PERSONAL.email, href: 'mailto:' + PERSONAL.email });
+  }
+  if (PERSONAL.phone) {
+    const phoneHref = 'tel:' + PERSONAL.phone.replace(/[^+\d]/g, '');
+    links.push({ icon: '☎', label: PERSONAL.phone, href: phoneHref });
+  }
+  if (PERSONAL.github) {
+    links.push({ icon: '⌥', label: PERSONAL.github, href: 'https://' + PERSONAL.github });
+  }
+  if (PERSONAL.linkedin) {
+    links.push({ icon: '◈', label: PERSONAL.linkedin, href: 'https://' + PERSONAL.linkedin });
+  }
+
+  const linksHTML = links.length
+    ? links.map(l => `
+      <a href="${l.href}" class="clink" ${l.href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+        <div class="clink-l"><span class="clink-ico">${l.icon}</span><span>${l.label}</span></div>
+        <span class="clink-arr">→</span>
+      </a>
+    `).join('')
+    : `<div class="cd">No contact methods configured.</div>`;
+
+  el.innerHTML = `
+    <section id="contact">
+      <div class="wrap">
+        <div class="sec-lbl rev">contact</div>
+        <div class="contact-block rev">
+          <div>
+            <div class="contact-hd">Let's build<em>something great.</em></div>
+            <p class="contact-sub">
+              ${contactPitch}<br><br>
+              <span style="color:var(--green)">Response time:</span> ${responseTime}.
+            </p>
+          </div>
+          <div class="clinks">${linksHTML}</div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/* ── FOOTER ── */
+function renderFooter() {
+  const el = document.getElementById('site-footer');
+  el.innerHTML = `
+    <span>${PERSONAL.handle}</span> — ${PERSONAL.footerTagline}
+    <div>${PERSONAL.footerRight}</div>
+  `;
+}
+
+/* ── Run all renderers ── */
+document.title = `${PERSONAL.name} | Portfolio`;
+renderNav();
+renderHero();
+renderAbout();
+renderSkills();
+renderProjects();
+renderExperience();
+renderEducation();
+renderContact();
+renderFooter();
