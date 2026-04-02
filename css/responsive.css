@@ -57,6 +57,10 @@
   .about-grid  { grid-template-columns: 1fr; gap: 16px; }
   .about-card  { padding: 20px 18px; }
   .stat        { grid-template-columns: 1fr; gap: 4px; padding: 8px 10px; }
+  .companies-strip { margin-top: 12px; padding: 16px; }
+  .company-lane + .company-lane { margin-top: 8px; }
+  .company-seq { gap: 8px; padding: 7px 8px; }
+  .co-text { font-size: 10px; padding: 4px 8px; }
 
   /* Skills */
   .skills-grid { grid-template-columns: 1fr 1fr; gap: 12px; }

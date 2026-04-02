@@ -20,4 +20,11 @@ My core expertise includes <strong>Java, Scala, Spring Boot, Apache Spark, Apach
     { key: 'olap_databases',   value: 'Pinot, Iceberg, TimescaleDB, StarRocks, TiDB' },
   ],
 
+  companies: [
+    'Cisco',
+    'Deutsche Bank',
+    'Tietoevry',
+    'SaiSystems Technology',
+  ],
+
 };

@@ -92,6 +92,28 @@ function renderAbout() {
       <span class="sv">${s.value}</span>
     </div>
   `).join('');
+  const companyNames = (Array.isArray(ABOUT.companies) ? ABOUT.companies : [])
+    .map(c => (typeof c === 'string' ? c : c && c.name))
+    .filter(Boolean);
+  const companyPills = companyNames.map(name => `<span class="co-text">${name}</span>`).join('');
+  const companiesStrip = companyPills ? `
+    <div class="companies-strip rev" style="transition-delay:.14s">
+      <div class="card-hd">companies.log</div>
+      <div class="companies-sub">companies I was part of</div>
+      <div class="company-lane company-lane-ltr">
+        <div class="company-track">
+          <div class="company-seq">${companyPills}</div>
+          <div class="company-seq" aria-hidden="true">${companyPills}</div>
+        </div>
+      </div>
+      <div class="company-lane company-lane-rtl">
+        <div class="company-track">
+          <div class="company-seq">${companyPills}</div>
+          <div class="company-seq" aria-hidden="true">${companyPills}</div>
+        </div>
+      </div>
+    </div>
+  ` : '';
 
   el.innerHTML = `
     <section id="about">
@@ -107,6 +129,7 @@ function renderAbout() {
             <div class="stats">${statsHTML}</div>
           </div>
         </div>
+        ${companiesStrip}
       </div>
     </section>
   `;
