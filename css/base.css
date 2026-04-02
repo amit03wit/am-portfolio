@@ -18,6 +18,7 @@
   --text:    #c8c8c8;
   --dim:     #666;
   --border:  rgba(0,255,136,0.12);
+  --section-space: 78px;
   --mono:    'JetBrains Mono', monospace;
   --display: 'Syne', sans-serif;
 }
@@ -75,11 +76,11 @@ nav {
 
 /* ── Layout helpers ── */
 main  { position: relative; z-index: 1; }
-section { padding: 96px 0; }
+section { padding: var(--section-space) 0; }
 .wrap { max-width: 960px; margin: 0 auto; padding: 0 48px; }
 .sec-lbl {
   font-size: 11px; color: var(--dim); letter-spacing: .15em; text-transform: uppercase;
-  margin-bottom: 44px; display: flex; align-items: center; gap: 14px;
+  margin-bottom: 34px; display: flex; align-items: center; gap: 14px;
 }
 .sec-lbl::before { content: '//'; color: var(--green); font-weight: 600; }
 .sec-lbl::after  { content: ''; flex: 1; height: 1px; background: var(--border); }

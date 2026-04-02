@@ -3,7 +3,7 @@
    ════════════════════════════════════════ */
 
 /* ── Hero section ── */
-#hero { min-height: 100vh; display: flex; align-items: center; padding-top: 72px; }
+#hero { display: flex; align-items: center; padding: 104px 0 var(--section-space); }
 
 /* ── Terminal shell chrome ── */
 .term-shell {

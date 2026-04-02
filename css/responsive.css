@@ -29,8 +29,9 @@
 
   /* Layout */
   .wrap        { padding: 0 18px; }
-  section      { padding: 60px 0; }
-  .sec-lbl     { margin-bottom: 28px; font-size: 10px; }
+  section      { padding: 52px 0; }
+  .sec-lbl     { margin-bottom: 24px; font-size: 10px; }
+  #hero        { padding: 82px 0 52px; }
 
   /* Terminal */
   .term-shell  { border-radius: 4px; }
@@ -56,9 +57,6 @@
   .about-grid  { grid-template-columns: 1fr; gap: 16px; }
   .about-card  { padding: 20px 18px; }
   .stat        { grid-template-columns: 1fr; gap: 4px; padding: 8px 10px; }
-  .companies-strip { padding: 16px; margin-top: 12px; }
-  .co-chip         { margin-right: 10px; padding: 6px 9px; }
-  .co-logo-wrap    { width: 102px; height: 30px; }
 
   /* Skills */
   .skills-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
