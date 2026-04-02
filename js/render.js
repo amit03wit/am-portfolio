@@ -62,6 +62,20 @@ function renderHero() {
           <p class="hero-tag">
             <span>${PERSONAL.heroTagline}</span> — ${PERSONAL.heroDesc.replace(/\n/g, '<br>')}
           </p>
+          <div class="welcome-bot" role="img" aria-label="Robot waving a welcome banner">
+            <div class="bot-antenna"></div>
+            <div class="bot-head">
+              <span class="bot-eye"></span>
+              <span class="bot-eye"></span>
+            </div>
+            <div class="bot-torso"></div>
+            <div class="bot-arm bot-arm-left"></div>
+            <div class="bot-arm bot-arm-right">
+              <span class="bot-flag-pole"></span>
+              <span class="bot-flag">WELCOME</span>
+            </div>
+            <div class="bot-track"></div>
+          </div>
           <div class="ctas">${ctaHTML}</div>
         </div>
       </div>

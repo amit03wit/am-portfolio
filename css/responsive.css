@@ -48,6 +48,7 @@
   /* Hero */
   .hero-name   { margin-top: 28px; }
   .hero-tag    { font-size: 12px; }
+  .welcome-bot { transform: scale(.84); transform-origin: left top; margin-top: 16px; margin-left: 0; }
   .ctas        { gap: 10px; }
   .btn         { padding: 10px 18px; font-size: 11px; }
 
@@ -82,5 +83,6 @@
   .skills-grid { grid-template-columns: 1fr; }
   .proj-tags   { display: none; }
   .hero-name   { letter-spacing: -.04em; }
+  .welcome-bot { transform: scale(.72); height: 138px; }
   #tout        { max-height: 160px; }
 }

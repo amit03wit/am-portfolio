@@ -96,3 +96,153 @@
 .hero-tag { margin-top: 22px; color: var(--dim); font-size: 13px; max-width: 480px; line-height: 1.85; }
 .hero-tag span { color: var(--green); }
 .ctas { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+
+/* ── Welcome robot ── */
+.welcome-bot {
+  position: relative;
+  width: 196px;
+  height: 170px;
+  margin-top: 24px;
+  margin-left: 4px;
+}
+.bot-antenna {
+  position: absolute;
+  left: 76px;
+  top: 0;
+  width: 2px;
+  height: 18px;
+  background: var(--green);
+}
+.bot-antenna::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 14px rgba(0,255,136,.45);
+}
+.bot-head {
+  position: absolute;
+  top: 16px;
+  left: 45px;
+  width: 66px;
+  height: 46px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(0,255,136,.12), rgba(0,255,136,.03));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.bot-eye {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 10px rgba(0,255,136,.6);
+  animation: botBlink 5s ease-in-out infinite;
+}
+.bot-eye:nth-child(2) { animation-delay: .14s; }
+
+.bot-torso {
+  position: absolute;
+  top: 67px;
+  left: 37px;
+  width: 82px;
+  height: 62px;
+  border: 1px solid rgba(0,255,136,.55);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(0,255,136,.08), rgba(0,255,136,.01));
+}
+.bot-torso::before,
+.bot-torso::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 1px;
+  background: rgba(0,255,136,.25);
+}
+.bot-torso::before { top: 20px; }
+.bot-torso::after  { top: 36px; }
+
+.bot-arm {
+  position: absolute;
+  top: 76px;
+  width: 12px;
+  height: 44px;
+  border: 1px solid rgba(0,255,136,.55);
+  background: var(--bg3);
+}
+.bot-arm-left {
+  left: 24px;
+  border-radius: 8px 8px 4px 4px;
+  transform: rotate(14deg);
+}
+.bot-arm-right {
+  left: 120px;
+  border-radius: 8px 8px 4px 4px;
+  transform-origin: 6px 5px;
+  animation: botWave 2.4s ease-in-out infinite;
+}
+
+.bot-flag-pole {
+  position: absolute;
+  left: 9px;
+  top: -62px;
+  width: 2px;
+  height: 68px;
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(0,255,136,.25);
+}
+.bot-flag {
+  position: absolute;
+  left: 11px;
+  top: -60px;
+  padding: 5px 10px 5px 11px;
+  border: 1px solid var(--green);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background: linear-gradient(135deg, rgba(0,255,136,.22), rgba(0,255,136,.08));
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  white-space: nowrap;
+  animation: flagFlutter 1.5s ease-in-out infinite;
+}
+
+.bot-track {
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  width: 116px;
+  height: 18px;
+  border: 1px solid rgba(0,255,136,.55);
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0,255,136,.12) 0 8px,
+    rgba(0,255,136,.03) 8px 14px
+  );
+}
+
+@keyframes botWave {
+  0%, 100% { transform: rotate(16deg); }
+  50%      { transform: rotate(-12deg); }
+}
+
+@keyframes flagFlutter {
+  0%, 100% { transform: skewY(0deg) translateX(0); }
+  50%      { transform: skewY(-6deg) translateX(2px); }
+}
+
+@keyframes botBlink {
+  0%, 44%, 48%, 100% { transform: scaleY(1); opacity: 1; }
+  45%, 47%           { transform: scaleY(.2); opacity: .7; }
+}
