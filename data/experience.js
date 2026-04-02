@@ -12,12 +12,12 @@ const EXPERIENCE = [
     location: 'Bengaluru, India',
 
     story: `Working in Webex R&D across Meetings and Calling analytics initiatives.
-Owned engineering for VideoMesh (on-prem video calling solution), Calling Analytics transformation pipelines, and CX Assist pipelines using microservices with Kyuubi, Apache Spark, Apache Flink and KStreams.` ,
+Owned engineering for VideoMesh (on-prem video calling solution), Calling Analytics transformation pipelines, and Webex Meetings pipelines using microservices with Kyuubi, Apache Spark, Apache Flink and KStreams.` ,
 
     metrics: [
       { value: 'VideoMesh',         label: 'on-prem video calling solution support' },
       { value: 'Calling Analytics', label: 'transformation pipelines with Kyuubi/Spark/Flink/KStreams' },
-      { value: 'CX Assist',         label: 'pipeline engineering and data readiness' },
+      { value: 'Webex Meetings',    label: 'media analytics and pipeline engineering' },
       { value: 'Multi-store',       label: 'Pinot, TimescaleDB, TiDB and Iceberg delivery' },
     ],
 

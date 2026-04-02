@@ -55,6 +55,7 @@
   /* About */
   .about-grid  { grid-template-columns: 1fr; gap: 16px; }
   .about-card  { padding: 20px 18px; }
+  .stat        { grid-template-columns: 1fr; gap: 4px; padding: 8px 10px; }
   .tenure-row  { flex-direction: column; align-items: flex-start; gap: 4px; }
 
   /* Skills */
@@ -63,7 +64,7 @@
   .skills-pro  { padding: 18px 16px; margin-top: 12px; }
 
   /* Projects */
-  .proj-hd     { padding: 16px 18px; flex-wrap: wrap; gap: 8px; }
+  .proj-hd     { padding: 14px 16px; flex-wrap: wrap; gap: 8px; }
   .proj-hd-l   { flex-wrap: wrap; gap: 8px; }
   .proj-body   { padding: 0 18px 20px; }
   .proj-metrics { gap: 14px 20px; }

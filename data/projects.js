@@ -6,15 +6,15 @@
 const PROJECTS = [
 
   {
-    title:   'Webex Media Analytics, Calling Transformation and CX Assist Pipelines',
+    title:   'Webex Media Analytics, Calling Transformation and Webex Meetings',
     tags:    ['Java', 'Scala', 'Spring Boot', 'Kyuubi', 'Spark', 'Flink', 'KStreams', 'Pinot'],
 
     problem: 'Webex media and calling workloads generate complex, high-volume event streams where teams need near real-time analytics, reliable transformation pipelines, and storage across OLTP/OLAP targets for product decisions and operational visibility.',
 
-    built:   'Led analytics pipeline engineering across VideoMesh (on-prem video calling), Calling Analytics transformation flows, and CX Assist pipelines. Built microservice-driven ingestion and forwarding paths with Spring Boot, KStreams, Spark, and Flink; exposed API-ready datasets and supported analytical persistence across Pinot, TiDB, TimescaleDB and Iceberg-backed data layers.',
+    built:   'Led analytics pipeline engineering across VideoMesh (on-prem video calling), Calling Analytics transformation flows, and Webex Meetings workloads. Built microservice-driven ingestion and forwarding paths with Spring Boot, KStreams, Spark, and Flink; exposed API-ready datasets and supported analytical persistence across Pinot, TiDB, TimescaleDB and Iceberg-backed data layers.',
 
     metrics: [
-      { value: '3 lanes',        label: 'VideoMesh, Calling Analytics, CX Assist' },
+      { value: '3 lanes',        label: 'VideoMesh, Calling Analytics, Webex Meetings' },
       { value: 'Microservices',  label: 'Spark/Flink/KStreams orchestration' },
       { value: 'OLTP + OLAP',    label: 'integrated multi-store analytics delivery' },
     ],

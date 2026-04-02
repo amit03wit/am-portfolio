@@ -14,10 +14,10 @@ My core expertise includes <strong>Java, Scala, Spring Boot, Apache Spark, Apach
 
   stats: [
     { key: 'years_experience', value: '11+' },
-    { key: 'primary_stack',    value: 'Java + Angular + Apache Flink + Apache Spark + PostgreSQL and OLAP Databases' },
-    { key: 'streaming_stack',  value: 'Kafka + Spark + Flink + KStreams' },
-    { key: 'oltp_databases',   value: 'PostgreSQL + Oracle 11g + MySQL' },
-    { key: 'olap_databases',   value: 'Apache Pinot + Apache Iceberg + TimescaleDB + StarRocks + TiDB' },
+    { key: 'primary_stack',    value: 'Java, Angular, Flink, Spark, PostgreSQL, OLAP DBs' },
+    { key: 'streaming_stack',  value: 'Kafka, Spark, Flink, KStreams' },
+    { key: 'oltp_databases',   value: 'PostgreSQL, Oracle 11g, MySQL' },
+    { key: 'olap_databases',   value: 'Pinot, Iceberg, TimescaleDB, StarRocks, TiDB' },
   ],
 
   companyTenure: [
