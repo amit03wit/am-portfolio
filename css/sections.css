@@ -33,6 +33,7 @@
   border-radius: 4px;
   padding: 20px 22px;
 }
+#companies .companies-strip { margin-top: 0; }
 .companies-strip:hover { border-color: rgba(0,255,136,.28); }
 .companies-sub {
   color: var(--dim);
