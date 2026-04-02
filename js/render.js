@@ -134,17 +134,8 @@ function renderCompanies() {
         <div class="companies-strip rev">
           <div class="card-hd">companies.log</div>
           <div class="companies-sub">companies I was part of</div>
-          <div class="company-lane company-lane-ltr">
-            <div class="company-track">
-              <div class="company-seq">${companyPills}</div>
-              <div class="company-seq" aria-hidden="true">${companyPills}</div>
-            </div>
-          </div>
-          <div class="company-lane company-lane-rtl">
-            <div class="company-track">
-              <div class="company-seq">${companyPills}</div>
-              <div class="company-seq" aria-hidden="true">${companyPills}</div>
-            </div>
+          <div class="company-lane">
+            <div class="company-track">${companyPills}</div>
           </div>
         </div>
       </div>

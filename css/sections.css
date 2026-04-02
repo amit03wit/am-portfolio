@@ -46,26 +46,19 @@
   background: var(--bg3);
   border: 1px solid var(--muted2);
   border-radius: 4px;
+  padding: 8px 10px;
   overflow: hidden;
-}
-.company-lane + .company-lane { margin-top: 10px; }
-.company-track {
   display: flex;
-  width: max-content;
-  min-width: 100%;
-  will-change: transform;
-  animation: company-rtl 56s linear infinite;
+  justify-content: center;
 }
-.company-lane-ltr .company-track { animation-name: company-ltr; }
-.company-lane-rtl .company-track { animation-name: company-rtl; }
-.company-lane:hover .company-track { animation-play-state: paused; }
-.company-seq {
+.company-track {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 10px;
-  flex-shrink: 0;
+  will-change: transform;
+  animation: company-drift 14s ease-in-out infinite alternate;
 }
+.company-lane:hover .company-track { animation-play-state: paused; }
 .co-text {
   display: inline-flex;
   align-items: center;
@@ -76,13 +69,9 @@
   font-size: 11px;
   white-space: nowrap;
 }
-@keyframes company-rtl {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-@keyframes company-ltr {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+@keyframes company-drift {
+  from { transform: translateX(-18px); }
+  to   { transform: translateX(18px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .company-track { animation: none; }
