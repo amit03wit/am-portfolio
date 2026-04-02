@@ -6,17 +6,17 @@
 const PROJECTS = [
 
   {
-    title:   'Webex Media Analytics Service',
-    tags:    ['Java', 'Scala', 'Spring Boot', 'Spark', 'Flink', 'Kafka', 'Pinot'],
+    title:   'Webex Media Analytics, Calling Transformation and CX Assist Pipelines',
+    tags:    ['Java', 'Scala', 'Spring Boot', 'Kyuubi', 'Spark', 'Flink', 'KStreams', 'Pinot'],
 
-    problem: 'Webex media and calling ecosystems generate high-volume event streams that need low-latency enrichment, analytics, and storage across multiple sinks for business insights and operational visibility.',
+    problem: 'Webex media and calling workloads generate complex, high-volume event streams where teams need near real-time analytics, reliable transformation pipelines, and storage across OLTP/OLAP targets for product decisions and operational visibility.',
 
-    built:   'Built and evolved analytics services for Cisco Webex Media Analytics Framework covering Meetings, Video Mesh, and Calling domains. Developed streaming and aggregation flows on Spark/Flink with downstream routing, REST APIs for visual analysis, and data persistence to HDFS/Parquet, Timescale DB, TiDB, Iceberg, and Pinot.',
+    built:   'Led analytics pipeline engineering across VideoMesh (on-prem video calling), Calling Analytics transformation flows, and CX Assist pipelines. Built microservice-driven ingestion and forwarding paths with Spring Boot, KStreams, Spark, and Flink; exposed API-ready datasets and supported analytical persistence across Pinot, TiDB, TimescaleDB and Iceberg-backed data layers.',
 
     metrics: [
-      { value: '2022-Present', label: 'production ownership window' },
-      { value: 'Multi-sink',   label: 'analytics data architecture' },
-      { value: 'ML POCs',      label: 'k-means and churn prediction' },
+      { value: '3 lanes',        label: 'VideoMesh, Calling Analytics, CX Assist' },
+      { value: 'Microservices',  label: 'Spark/Flink/KStreams orchestration' },
+      { value: 'OLTP + OLAP',    label: 'integrated multi-store analytics delivery' },
     ],
 
     year: '2026',
@@ -25,17 +25,17 @@ const PROJECTS = [
   },
 
   {
-    title:   'Loan Loss Provision & DNR Platform',
-    tags:    ['Java 8', 'Spring Boot', 'Hibernate/JPA', 'Angular', 'OpenShift', 'Oracle'],
+    title:   'Loan Loss Provision (LLP) and Default & Recovery (DNR) Risk Platform',
+    tags:    ['Java 8', 'Spring Boot', 'Hibernate/JPA', 'Angular', 'OpenShift', 'Oracle 11g'],
 
-    problem: 'Credit risk teams require audit-ready and rule-driven automation to compute credit loss allowances across multiple GAAP scenarios while tracking workflow events like forbearance, UTP, and recovery.',
+    problem: 'Risk operations required an auditable, rule-driven platform to compute credit loss allowances and track events like forbearance, UTP, recovery and related compliance workflows at enterprise scale.',
 
-    built:   'Contributed to Deutsche Bank Group business-facing LLP and DNR web applications, including backend services in Spring Boot, persistence with JPA/Hibernate, legacy UI migration from GWT to Angular, and platform migration to OpenShift.',
+    built:   'Delivered full-stack capabilities for Deutsche Bank Group LLP and DNR modules, including business-facing Spring Boot services, persistence and workflow handling with JPA/Hibernate, modernization from legacy GWT flows to Angular UI, and migration of workloads to OpenShift cloud infrastructure.',
 
     metrics: [
-      { value: '2019-2022',   label: 'delivery period' },
-      { value: 'Risk domain', label: 'LLP and DNR workflows' },
-      { value: 'Modernized',  label: 'GWT to Angular transition' },
+      { value: 'RegTech',        label: 'credit loss and recovery workflow automation' },
+      { value: 'Modernization',  label: 'GWT to Angular migration' },
+      { value: 'Platform',       label: 'OpenShift deployment migration' },
     ],
 
     year: '2022',
@@ -44,17 +44,17 @@ const PROJECTS = [
   },
 
   {
-    title:   'Energy Components Product Engineering',
+    title:   'Energy Components Hydrocarbon Accounting Platform',
     tags:    ['Java 8', 'EJB', 'Oracle 12c', 'JUnit', 'Selenium', 'Docker', 'AWS'],
 
-    problem: 'Oil and gas operations need dependable systems to monitor production, transport, and sales workflows while enabling collaboration among license holders and domain teams.',
+    problem: 'Oil and gas operations needed dependable software to monitor production, transport and sales workflows while enabling cross-party coordination and domain reporting.',
 
-    built:   'Worked on TietoEVRY hydrocarbon accounting product development with responsibilities across analysis, development, and testing. Built Java web services, developed SQL reports, and supported containerized delivery workflows.',
+    built:   'Contributed across analysis, development and testing for TietoEvry Energy Components product. Implemented Java web services, supported business process workflows, authored SQL-based custom reports, and worked on delivery tooling including container and image creation.',
 
     metrics: [
-      { value: '2017-2019',  label: 'delivery period' },
-      { value: 'Oil & Gas',  label: 'industry focus' },
-      { value: 'End-to-end', label: 'analysis to implementation' },
+      { value: 'Domain',        label: 'oil and gas accounting systems' },
+      { value: 'Service Layer', label: 'Java webservice implementation' },
+      { value: 'Reporting',     label: 'custom SQL report generation' },
     ],
 
     year: '2019',
@@ -63,17 +63,17 @@ const PROJECTS = [
   },
 
   {
-    title:   'UTM and PBM Clinical Workflow Support',
+    title:   'UTM and PBM Clinical Workflow Systems',
     tags:    ['Java 7', 'Spring MVC', 'Hibernate', 'AngularJS', 'Healthcare'],
 
-    problem: 'Clinical and therapeutic management teams need efficient data workflows to review interventions and maintain patient medication records in a reliable application stack.',
+    problem: 'Clinical review and therapeutic management teams needed reliable applications for intervention workflows, patient medication records, and operational consistency in healthcare systems.',
 
-    built:   'As Associate Consultant at SAI Systems Inc., contributed to Utilization and Therapeutic Management initiatives including architecture-level involvement, controller-layer implementation, and AngularJS factories/directives support.',
+    built:   'As Associate Consultant at SaiSystems Technology, worked on Utilization and Therapeutic Management initiatives from early architecture discussions through controller-layer implementation; built AngularJS factories/directives and integrated backend components for clinical workflow support.',
 
     metrics: [
-      { value: '2015-2017',   label: 'delivery period' },
-      { value: 'Healthcare',  label: 'domain experience' },
-      { value: 'App lifecycle', label: 'architecture to implementation' },
+      { value: 'Healthcare',    label: 'clinical intervention and PBM support' },
+      { value: 'Architecture',  label: 'early-phase design participation' },
+      { value: 'Full lifecycle', label: 'analysis to implementation' },
     ],
 
     year: '2017',

@@ -11,12 +11,20 @@ const SKILLS = {
       pills: ['Java', 'Scala', 'Spring Boot', 'Hibernate', 'JPA', 'Angular', 'GWT', 'EJB'],
     },
     {
-      title: 'data & streaming',
-      pills: ['Apache Kafka', 'Apache Spark', 'Apache Flink', 'KStreams', 'Apache Pinot', 'Timescale DB', 'Apache Iceberg'],
+      title: 'streaming & event processing',
+      pills: ['Apache Kafka', 'Apache Spark', 'Apache Flink', 'KStreams', 'Apache Kyuubi'],
     },
     {
-      title: 'databases & storage',
-      pills: ['Oracle 11g/12c', 'PostgreSQL', 'TiDB', 'HDFS', 'Parquet'],
+      title: 'oltp databases',
+      pills: ['PostgreSQL', 'Oracle 11g', 'MySQL'],
+    },
+    {
+      title: 'olap databases',
+      pills: ['Apache Pinot', 'Apache Iceberg', 'TimescaleDB (TigerData)', 'StarRocks', 'TiDB'],
+    },
+    {
+      title: 'data lakes & query layer',
+      pills: ['HDFS', 'Parquet', 'Iceberg', 'Presto', 'Trino'],
     },
     {
       title: 'cloud & devops',
@@ -30,10 +38,14 @@ const SKILLS = {
       title: 'testing & engineering practices',
       pills: ['REST APIs', 'JUnit', 'Selenium', 'Cucumber', 'CI/CD', 'System Design'],
     },
-    {
-      title: 'applied analytics',
-      pills: ['Supervised Learning', 'Unsupervised Learning', 'K-Means', 'Data Engineering'],
-    },
+  ],
+
+  ratings: [
+    { skill: 'Java',             score: 4.5 },
+    { skill: 'Scala',            score: 4.0 },
+    { skill: 'Data Engineering', score: 4.0 },
+    { skill: 'Cloud Platform',   score: 4.0 },
+    { skill: 'Angular',          score: 3.0 },
   ],
 
 };

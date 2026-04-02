@@ -92,6 +92,19 @@ function renderAbout() {
       <span class="sv">${s.value}</span>
     </div>
   `).join('');
+  const companyTenure = Array.isArray(ABOUT.companyTenure) ? ABOUT.companyTenure : [];
+  const tenureHTML = companyTenure.map(item => `
+    <div class="tenure-row">
+      <span class="tenure-company">${item.company}</span>
+      <span class="tenure-period">${item.tenure}</span>
+    </div>
+  `).join('');
+  const tenureCard = tenureHTML ? `
+    <div class="about-card about-card-wide rev" style="transition-delay:.14s">
+      <div class="card-hd">company_tenure.json</div>
+      <div class="tenure-list">${tenureHTML}</div>
+    </div>
+  ` : '';
 
   el.innerHTML = `
     <section id="about">
@@ -106,6 +119,7 @@ function renderAbout() {
             <div class="card-hd">stats.json</div>
             <div class="stats">${statsHTML}</div>
           </div>
+          ${tenureCard}
         </div>
       </div>
     </section>
@@ -126,6 +140,29 @@ function renderSkills() {
       </div>
     `;
   }).join('');
+  const ratings = Array.isArray(SKILLS.ratings) ? SKILLS.ratings : [];
+  const ratingsHTML = ratings.map((r, i) => {
+    const score = Math.max(0, Math.min(5, Number(r.score) || 0));
+    const pct = (score / 5) * 100;
+    const scoreLabel = Number.isInteger(score) ? score.toFixed(0) : score.toFixed(1);
+    const stars = '★'.repeat(Math.round(score)).padEnd(5, '☆');
+    return `
+      <div class="bar-item" style="transition-delay:${(i * 0.05).toFixed(2)}s">
+        <div class="bar-lbl">
+          <span>${r.skill}</span>
+          <span>${scoreLabel}/5</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+        <div class="rating-stars">${stars}</div>
+      </div>
+    `;
+  }).join('');
+  const proficiencyCard = ratingsHTML ? `
+    <div class="skills-pro rev">
+      <div class="sg-ttl">skill ratings</div>
+      <div class="bar-list">${ratingsHTML}</div>
+    </div>
+  ` : '';
 
   el.innerHTML = `
     <section id="skills">
@@ -134,6 +171,7 @@ function renderSkills() {
         <div class="skills-grid">
           ${groupsHTML}
         </div>
+        ${proficiencyCard}
       </div>
     </section>
   `;

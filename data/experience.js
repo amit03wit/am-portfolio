@@ -6,54 +6,54 @@
 const EXPERIENCE = [
 
   {
-    period:   '2022-05 - Present',
+    period:   '04 May 2022 - Present',
     role:     'Senior Software Engineer',
-    company:  'Cisco Webex',
+    company:  'Cisco',
     location: 'Bengaluru, India',
 
-    story: `Working in Webex R&D across Meetings and Calling on the Media Analytics Framework.
-Designing and maintaining services for ingestion, enrichment, streaming analytics, and downstream data delivery using Spring Boot, Spark, Flink, and Kafka.` ,
+    story: `Working in Webex R&D across Meetings and Calling analytics initiatives.
+Owned engineering for VideoMesh (on-prem video calling solution), Calling Analytics transformation pipelines, and CX Assist pipelines using microservices with Kyuubi, Apache Spark, Apache Flink and KStreams.` ,
 
     metrics: [
-      { value: 'Spark + Flink', label: 'streaming and aggregation stack' },
-      { value: 'WxCAS + SSE',   label: 'calling data coverage' },
-      { value: 'Multi-sink',    label: 'HDFS, Pinot, Timescale, TiDB, Iceberg' },
-      { value: 'POC ownership', label: 'k-means and churn prediction' },
+      { value: 'VideoMesh',         label: 'on-prem video calling solution support' },
+      { value: 'Calling Analytics', label: 'transformation pipelines with Kyuubi/Spark/Flink/KStreams' },
+      { value: 'CX Assist',         label: 'pipeline engineering and data readiness' },
+      { value: 'Multi-store',       label: 'Pinot, TimescaleDB, TiDB and Iceberg delivery' },
     ],
 
   },
 
   {
-    period:   '2019-04 - 2022-05',
-    role:     'Associate - Fullstack Developer',
-    company:  'Deutsche Bank Group',
+    period:   '08 Apr 2019 - 01 Apr 2022',
+    role:     'Associate - Full-Stack Developer',
+    company:  'Deutsche Bank',
     location: 'Pune, India',
 
-    story: `Worked on Loan Loss Provision and Default & Recovery solutions for risk management.
-Built and maintained Spring Boot + JPA applications, supported regulatory workflow features, migrated GWT modules to Angular, and moved workloads to OpenShift.` ,
+    story: `Worked on Loan Loss Provision (LLP) and Default & Recovery (DNR) solutions for enterprise risk management.
+Built and maintained Spring Boot and JPA/Hibernate services, supported regulatory workflow logic, migrated legacy UI modules from GWT to Angular, and helped move applications to OpenShift.` ,
 
     metrics: [
-      { value: 'LLP + DNR',     label: 'risk management platform modules' },
-      { value: 'Java + Angular', label: 'full-stack development' },
-      { value: 'OpenShift',     label: 'cloud platform migration' },
+      { value: 'LLP + DNR',   label: 'risk management platform modules' },
+      { value: 'Regulatory',  label: 'forbearance, UTP and recovery workflows' },
+      { value: 'OpenShift',   label: 'cloud platform migration' },
     ],
 
   },
 
   {
-    period:   '2017-12 - 2019-04',
+    period:   '26 Dec 2017 - 04 Apr 2019',
     role:     'Software Engineer',
-    company:  'TietoEVRY',
+    company:  'TietoEvry',
     location: 'Pune, India',
-    oneliner: 'Contributed to the Energy Components hydrocarbon accounting product for oil and gas use cases, handling analysis, development, testing, Java web services, SQL reporting, and container/image workflows.',
+    oneliner: 'Contributed to the Energy Components hydrocarbon accounting platform for oil and gas use cases, handling analysis, development, testing, Java webservices, SQL reporting and container/image creation workflows.',
   },
 
   {
-    period:   '2015-02 - 2017-12',
+    period:   '24 Feb 2015 - 22 Dec 2017',
     role:     'Associate Consultant',
-    company:  'SAI Systems Inc.',
+    company:  'SaiSystems Technology',
     location: 'Pune, India',
-    oneliner: 'Worked on Utilization and Therapeutic Management initiatives, implementing Java 7 + Spring MVC + Hibernate + AngularJS solutions for clinical review workflows and patient medication records.',
+    oneliner: 'Worked on Utilization and Therapeutic Management systems, implementing Java 7, Spring MVC, Hibernate and AngularJS solutions for clinical review, intervention services and patient medication record workflows.',
   },
 
 ];

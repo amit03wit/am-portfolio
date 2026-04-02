@@ -23,7 +23,7 @@ const PERSONAL = {
   heroLine1:   'Building robust systems',
   heroLine2:   'for scale.',
   heroTagline: '# Full-Stack Developer & Data Engineer',
-  heroDesc:    '11+ years in software development across collaboration analytics, banking risk platforms, and enterprise products. Java, Scala, Spring Boot, Spark, Flink, Kafka, and cloud-native delivery.',
+  heroDesc:    '11+ years in software development across collaboration analytics, banking risk platforms, and enterprise products. Java, Scala, Spring Boot, Spark, Flink, Kafka, and cloud-native delivery.\nOLTP: PostgreSQL, Oracle 11g, MySQL. OLAP: Apache Pinot, Apache Iceberg, TimescaleDB (TigerData), StarRocks, TiDB.',
 
   // CTA buttons
   ctas: [
