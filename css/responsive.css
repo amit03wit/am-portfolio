@@ -58,6 +58,7 @@
   .stat        { grid-template-columns: 1fr; gap: 4px; padding: 8px 10px; }
   .companies-strip { padding: 16px; margin-top: 12px; }
   .co-chip         { margin-right: 10px; padding: 6px 9px; }
+  .co-logo-wrap    { width: 102px; height: 30px; }
 
   /* Skills */
   .skills-grid { grid-template-columns: 1fr 1fr; gap: 12px; }

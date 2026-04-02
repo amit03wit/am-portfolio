@@ -21,10 +21,10 @@ My core expertise includes <strong>Java, Scala, Spring Boot, Apache Spark, Apach
   ],
 
   companies: [
-    { name: 'Cisco',                 logo: 'https://logo.clearbit.com/cisco.com' },
-    { name: 'Deutsche Bank',         logo: 'https://logo.clearbit.com/db.com' },
-    { name: 'Tietoevry',             logo: 'https://logo.clearbit.com/tietoevry.com' },
-    { name: 'SaiSystems Technology', logo: 'https://logo.clearbit.com/saisystems.com' },
+    { name: 'Cisco',                 logo: 'assets/logos/cisco.gif' },
+    { name: 'Deutsche Bank',         logo: 'assets/logos/deutsche-bank.png' },
+    { name: 'Tietoevry',             logo: 'assets/logos/tietoevry.png' },
+    { name: 'SaiSystems Technology', logo: 'assets/logos/saisystems.png' },
   ],
 
 };
