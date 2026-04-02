@@ -80,7 +80,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 .proj-card:hover { border-color: rgba(0,255,136,.3); }
-.proj-hd { padding: 17px 22px; display: flex; align-items: center; justify-content: space-between; user-select: none; }
+.proj-hd { padding: 17px 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px; user-select: none; }
 .proj-hd-l { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .proj-idx  { color: var(--muted); font-size: 11px; flex-shrink: 0; }
 .proj-name { color: var(--text); font-size: 14px; font-weight: 600; flex-shrink: 1; min-width: 0; }
@@ -93,6 +93,7 @@
   font-size: 11px;
   width: 18px;
   height: 18px;
+  margin-left: 10px;
   border: 1px solid rgba(0,255,136,.35);
   border-radius: 2px;
   display: inline-flex;
