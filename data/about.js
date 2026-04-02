@@ -20,11 +20,11 @@ My core expertise includes <strong>Java, Scala, Spring Boot, Apache Spark, Apach
     { key: 'olap_databases',   value: 'Pinot, Iceberg, TimescaleDB, StarRocks, TiDB' },
   ],
 
-  companyTenure: [
-    { company: 'Cisco',                 tenure: '04 May 2022 - Present' },
-    { company: 'Deutsche Bank',         tenure: '08 Apr 2019 - 01 Apr 2022' },
-    { company: 'TietoEvry',             tenure: '26 Dec 2017 - 04 Apr 2019' },
-    { company: 'SaiSystems Technology', tenure: '24 Feb 2015 - 22 Dec 2017' },
+  companies: [
+    { name: 'Cisco',                 logo: 'https://logo.clearbit.com/cisco.com' },
+    { name: 'Deutsche Bank',         logo: 'https://logo.clearbit.com/db.com' },
+    { name: 'Tietoevry',             logo: 'https://logo.clearbit.com/tietoevry.com' },
+    { name: 'SaiSystems Technology', logo: 'https://logo.clearbit.com/saisystems.com' },
   ],
 
 };

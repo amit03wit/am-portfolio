@@ -92,17 +92,34 @@ function renderAbout() {
       <span class="sv">${s.value}</span>
     </div>
   `).join('');
-  const companyTenure = Array.isArray(ABOUT.companyTenure) ? ABOUT.companyTenure : [];
-  const tenureHTML = companyTenure.map(item => `
-    <div class="tenure-row">
-      <span class="tenure-company">${item.company}</span>
-      <span class="tenure-period">${item.tenure}</span>
-    </div>
-  `).join('');
-  const tenureCard = tenureHTML ? `
-    <div class="about-card about-card-wide rev" style="transition-delay:.14s">
-      <div class="card-hd">company_tenure.json</div>
-      <div class="tenure-list">${tenureHTML}</div>
+  const companies = Array.isArray(ABOUT.companies) ? ABOUT.companies : [];
+  const companiesHTML = companies.map(c => {
+    const initials = String(c.name || '')
+      .split(/\s+/)
+      .filter(Boolean)
+      .map(w => w[0])
+      .join('')
+      .slice(0, 2)
+      .toUpperCase();
+    return `
+      <span class="co-chip">
+        <span class="co-logo-wrap">
+          <img class="co-logo" src="${c.logo}" alt="${c.name} logo"
+            loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+          <span class="co-logo-fallback">${initials || 'CO'}</span>
+        </span>
+        <span class="co-name">${c.name}</span>
+      </span>
+    `;
+  }).join('');
+  const companiesMarquee = companiesHTML ? `
+    <div class="companies-strip rev" style="transition-delay:.14s">
+      <div class="card-hd">companies.log</div>
+      <div class="companies-sub">companies I was part of</div>
+      <marquee class="company-marquee" behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+        ${companiesHTML}${companiesHTML}
+      </marquee>
     </div>
   ` : '';
 
@@ -119,8 +136,8 @@ function renderAbout() {
             <div class="card-hd">stats.json</div>
             <div class="stats">${statsHTML}</div>
           </div>
-          ${tenureCard}
         </div>
+        ${companiesMarquee}
       </div>
     </section>
   `;
